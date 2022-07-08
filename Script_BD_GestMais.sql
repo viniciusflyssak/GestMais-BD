@@ -18,9 +18,9 @@ CREATE TABLE ALUNOS_PROFESSOR(ID_ALUNOS_PROFESSOR SERIAL CONSTRAINT PK_ALUNOS_PR
                               ANO INT CONSTRAINT NNANO NOT NULL, 
                               ID_ALUNO INT CONSTRAINT NNID_ALUNO NOT NULL,
                               ID_PROFESSOR INT CONSTRAINT NNID_PROFESSOR NOT NULL,
-                              NOTA1 DECIMAL(2,1),
-                              NOTA2 DECIMAL(2,1),
-                              NOTA3 DECIMAL(2,1),
-                              NOTA4 DECIMAL(2,1),
+                              NOTA1 DECIMAL(4,2),
+                              NOTA2 DECIMAL(4,2),
+                              NOTA3 DECIMAL(4,2),
+                              NOTA4 DECIMAL(4,2),
                               CONSTRAINT FK_ALUNOS_PROFESSORES_ALUNOS FOREIGN KEY (ID_ALUNO) REFERENCES ALUNOS(ID_ALUNO),
                               CONSTRAINT FK_ALUNOS_PROFESSORES_PROFESSORES FOREIGN KEY (ID_PROFESSOR) REFERENCES PROFESSORES(ID_PROFESSOR));                        
